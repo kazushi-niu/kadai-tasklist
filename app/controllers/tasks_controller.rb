@@ -33,7 +33,7 @@ class TasksController < ApplicationController
       redirect_to @task
     else
       flash.now[:danger] = 'Task は更新されませんでした'
-      rander :edit
+      render :edit
     end
   end
   
