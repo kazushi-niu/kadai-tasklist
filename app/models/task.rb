@@ -1,3 +1,3 @@
 class Task < ApplicationRecord
-  validates :status, presence: true , length: {maximum: 5}
+  validates :status, presence: true , length: {maximum: 10}
 end
