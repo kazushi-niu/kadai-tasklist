@@ -1,0 +1,4 @@
+<% flash.each do |task_type, task| %>
+  <!-- アラート機能追加(Bootstrap) -->
+  <div class="alert alert-<%= task_type %>"><%= task %></div>
+<% end %>
