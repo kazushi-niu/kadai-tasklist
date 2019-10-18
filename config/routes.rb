@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   root to: 'tasks#index'
   
   resources :tasks
+  
+  #ユーザ登録用
+  get 'signup', to: 'users#new'
+  resources :users, only: [:show, :create]
 end
