@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
-  #ユーザー詳細
-  def show
-    @user = User.find(params[:id])
-  end
+  before_action :require_user_logged_in, only: [:index, :show]
   
   #ユーザ登録用フォーム
   def new
@@ -23,6 +20,7 @@ class UsersController < ApplicationController
   end
   
   private
+  #user_paramsの定義
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
