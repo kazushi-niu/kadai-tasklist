@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  #ユーザ登録操作
+  #ユーザ登録
   def create
     @user = User.new(user_params)
     
